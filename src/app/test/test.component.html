@@ -1,0 +1,9 @@
+<div class="container my-5">
+    <p>hello {{name}} !</p>
+    <img style="width: 100px;" [src]="imageUrl" alt=""> <br> <br>
+    <button (click)="hello(name)" class="btn btn-dark">hello btn</button>
+
+    <div *ngIf="booksTab.length==0" class="alert alert-warning">list vide</div>
+
+
+</div>

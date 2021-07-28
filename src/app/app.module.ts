@@ -9,7 +9,11 @@ import { LoginComponent } from './public/login/login.component';
 import { PoepleListComponent } from './private/poeple-list/poeple-list.component';
 import { NavbarComponent } from './public/navbar/navbar.component';
 import { FooterComponent } from './public/footer/footer.component';
+import { TestComponent } from './test/test.component';
+import { Page404Component } from './public/page404/page404.component';
 
+
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +22,14 @@ import { FooterComponent } from './public/footer/footer.component';
     LoginComponent,
     PoepleListComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    TestComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
