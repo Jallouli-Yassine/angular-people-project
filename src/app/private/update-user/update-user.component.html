@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container my-5">
+    <button [routerLink]="['/poeple-list']"  class="btn btn-primary mb-4">back</button>
     <form>
         <div class="row">
             <div class="mb-3 form-group col-6">
@@ -20,14 +21,10 @@
                 <label for="email">email</label>
                 <input type="text" name="email" id="email" class="form-control">
             </div>
-            <div class="mb-3 form-group col-12">
-                <label for="password">password</label>
-                <input type="text" name="password" id="password" class="form-control">
-            </div>
         </div>
         <div class="row">
             <div class="form-group col">
-                <input type="submit" value="register" class="btn btn-info">
+                <input type="submit" value="update user" class="btn btn-warning">
             </div>
         </div>
     </form>

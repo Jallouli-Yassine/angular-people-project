@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  myForm: FormGroup
+  constructor(private fb: FormBuilder) {
+    let formControls = {
 
+    }
+    this.myForm=this.fb.group(formControls);
+  }
+  
   ngOnInit(): void {
   }
 

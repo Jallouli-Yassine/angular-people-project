@@ -6,17 +6,21 @@ import { HttpClient } from '@angular/common/http'
 export class UserService {
 
 
-  private deleteUserUrl = "https://backend-people-crud-app.herokuapp.com/users/";
-  private getAllUsersUrl = "https://backend-people-crud-app.herokuapp.com/users";
+  private deleteUserUrl = "http://localhost:3000/user/deleOne/";
+  private getAllUsersUrl = "http://localhost:3000/user/all";
+  private deleteAllUsersUrl= "http://localhost:3000/user/deleteAll";
   constructor(private http: HttpClient) { }
 
   getAll() {
     return this.http.get<any>(this.getAllUsersUrl);
-
   }
 
   deleteUser(id: String) {
     return this.http.delete<any>(this.deleteUserUrl + id);
+  }
+
+  deleteAllUsers(){
+    return this.http.delete<any>(this.deleteAllUsersUrl);
   }
 
 }

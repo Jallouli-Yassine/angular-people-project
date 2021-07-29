@@ -1,23 +1,30 @@
 <app-navbar></app-navbar>
 <div class="container my-5">
+    <button [routerLink]="['/add-user']"  class="btn btn-info mb-3 mx-2">add user</button>
+    <button (click)="deleteAllUsers()" class="btn btn-danger mb-3 mx-2">delete all users</button>
     <table *ngIf="poepleList.length!=0" class="table">
         <thead>
             <tr>
-                <th>#</th>
                 <th>name</th>
                 <th>lastname</th>
+                <th>email</th>
                 <th>#</th>
+                <th>
+                  
+                  
+                </th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let person of poepleList">
-                <td>{{person._id}}</td>
                 <td>{{person.firstname}}</td>
                 <td>{{person.lastname}}</td>
+                <td>{{person.email}}</td>
                 <td>
                     <button (click)="deletePerson(person)" class=" btn btn-danger">delete</button>
-                    <button class="btn btn-warning mx-2">update</button>
+                    <button [routerLink]="['/update-user']" class="btn btn-warning mx-2">update</button>
                 </td>
+                <td></td>
             </tr>
         </tbody>
     </table>

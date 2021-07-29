@@ -14,6 +14,11 @@ import { Page404Component } from './public/page404/page404.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
+import { AddUserComponent } from './private/add-user/add-user.component';
+import { UpdateUserComponent } from './private/update-user/update-user.component';
+
+//reactive form:
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,12 +29,16 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     FooterComponent,
     TestComponent,
-    Page404Component
+    Page404Component,
+    AddUserComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div class="container my-5">
+    <button [routerLink]="['/poeple-list']"  class="btn btn-primary mb-4">back</button>
+    <form [formGroup]="addUserForm" (ngSubmit)="addUser()">
+        <div class="row">
+            <div class="mb-3 form-group col-6">
+                <label for="firstname">firstname</label>
+                <input formControlName="firstname" type="text" name="firstname" id="firstname" class="form-control">
+                <div *ngIf="firstname.touched && firstname.invalid">
+                    <small *ngIf="firstname.errors.required" class="text-danger">firstname is required <br></small>
+                    <small *ngIf="firstname.errors.pattern" class="text-danger">invalid firstname <br></small>
+                    <small *ngIf="firstname.errors.minlength" class="text-danger">firstname must contain at least 3 characters</small>
+                </div>
+            </div>
+            <div class="mb-3 form-group col-6">
+                <label for="lastname">lastname</label>
+                <input formControlName="lastname" type="text" name="lastname" id="lastname" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 form-group col-12">
+                <label for="phone">phone</label>
+                <input formControlName="phone" type="text" name="phone" id="phone" class="form-control">
+            </div>
+            <div class="mb-3 form-group col-12">
+                <label for="email">email</label>
+                <input formControlName="email" type="email" name="email" id="email" class="form-control">
+            </div>
+            <div class="mb-3 form-group col-12">
+                <label for="password">password</label>
+                <input formControlName="password" type="password" name="password" id="password" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <input [disabled]="addUserForm.invalid" type="submit" value="add user" class="btn btn-info">
+            </div>
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>
