@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container my-5">
-    <button [routerLink]="['/add-user']"  class="btn btn-info mb-3 mx-2">add user</button>
+    <button [routerLink]="['/add-user']" class="btn btn-info mb-3 mx-2">add user</button>
     <button (click)="deleteAllUsers()" class="btn btn-danger mb-3 mx-2">delete all users</button>
     <table *ngIf="poepleList.length!=0" class="table">
         <thead>
@@ -10,8 +10,8 @@
                 <th>email</th>
                 <th>#</th>
                 <th>
-                  
-                  
+
+
                 </th>
             </tr>
         </thead>

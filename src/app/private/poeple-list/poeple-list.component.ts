@@ -31,13 +31,13 @@ export class PoepleListComponent implements OnInit {
     this.poepleList.splice(index, 1);
     this.userService.deleteUser(person._id).subscribe(res => console.log(res), err => console.log("err"));
   }
-  
+
   deleteAllUsers() {
     let reponse;
-    do{
-       reponse = Number(prompt('kenek met2aked amel 1 makenech amel 0'));
-    }while(reponse!=1 && reponse !=0);
-   
+    do {
+      reponse = Number(prompt('kenek met2aked amel 1 makenech amel 0'));
+    } while (reponse != 1 && reponse != 0);
+
     if (reponse === 1) {
       this.poepleList.splice(0, this.poepleList.length);
       this.userService.deleteAllUsers().subscribe(res => console.log(res), err => console.log(err));
