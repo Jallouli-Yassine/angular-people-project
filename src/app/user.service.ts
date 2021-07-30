@@ -11,6 +11,7 @@ export class UserService {
   private getAllUsersUrl = "http://localhost:3000/user/all";
   private deleteAllUsersUrl = "http://localhost:3000/user/deleteAll";
   private addUserUrl = "http://localhost:3000/user/register";
+  private getOneUserUrl = "http://localhost:3000/user/one/"
   constructor(private http: HttpClient) { }
 
   getAll() {
@@ -24,8 +25,12 @@ export class UserService {
   deleteAllUsers() {
     return this.http.delete<any>(this.deleteAllUsersUrl);
   }
+
   addUserD(user: User) {
     return this.http.post<any>(this.addUserUrl, user);
   }
-
+  getOneUser(id: String) {
+    return this.http.get<any>(this.getOneUserUrl+id);
+  }
+  
 }

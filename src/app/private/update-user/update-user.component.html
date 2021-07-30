@@ -1,25 +1,25 @@
 <app-navbar></app-navbar>
 <div class="container my-5">
     <button [routerLink]="['/poeple-list']"  class="btn btn-primary mb-4">back</button>
-    <form>
+    <form [formGroup]="updateUserForm" (ngSubmit)="updateUser()">
         <div class="row">
             <div class="mb-3 form-group col-6">
                 <label for="firstname">firstname</label>
-                <input type="text" name="firstname" id="firstname" class="form-control">
+                <input formControlName="firstname" type="text" name="firstname" id="firstname" class="form-control">
             </div>
             <div class="mb-3 form-group col-6">
                 <label for="lastname">lastname</label>
-                <input type="text" name="lastname" id="lastname" class="form-control">
+                <input formControlName="lastname" type="text" name="lastname" id="lastname" class="form-control">
             </div>
         </div>
         <div class="row">
             <div class="mb-3 form-group col-12">
                 <label for="phone">phone</label>
-                <input type="text" name="phone" id="phone" class="form-control">
+                <input formControlName="phone" type="text" name="phone" id="phone" class="form-control">
             </div>
             <div class="mb-3 form-group col-12">
                 <label for="email">email</label>
-                <input type="text" name="email" id="email" class="form-control">
+                <input formControlName="email" type="text" name="email" id="email" class="form-control">
             </div>
         </div>
         <div class="row">

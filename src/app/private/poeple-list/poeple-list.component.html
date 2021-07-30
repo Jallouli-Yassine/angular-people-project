@@ -7,6 +7,7 @@
             <tr>
                 <th>name</th>
                 <th>lastname</th>
+                <th>phone</th>
                 <th>email</th>
                 <th>#</th>
                 <th>
@@ -19,10 +20,11 @@
             <tr *ngFor="let person of poepleList">
                 <td>{{person.firstname}}</td>
                 <td>{{person.lastname}}</td>
+                <td>{{person.phone}}</td>
                 <td>{{person.email}}</td>
                 <td>
                     <button (click)="deletePerson(person)" class=" btn btn-danger">delete</button>
-                    <button [routerLink]="['/update-user']" class="btn btn-warning mx-2">update</button>
+                    <button [routerLink]="['/update-user',person._id]" class="btn btn-warning mx-2">update</button>
                 </td>
                 <td></td>
             </tr>

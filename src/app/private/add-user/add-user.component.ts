@@ -63,6 +63,7 @@ export class AddUserComponent implements OnInit {
         console.log(res);
         this.router.navigate(['/poeple-list']);
       },
-      err => console.log(err));
+      err => console.log(err)
+    );
   }
 }
